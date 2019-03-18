@@ -1,0 +1,51 @@
+int led = D7; 
+
+void setup() {
+
+	pinMode(led, OUTPUT);
+
+}
+
+void loop() {
+
+	LongBlink();
+	ShortBlink();
+	LongBlink();
+	LongBlink();
+	delay(500);
+	
+	LongBlink();
+	LongBlink();
+	LongBlink();
+	delay(500);	
+
+	ShortBlink();
+	ShortBlink();
+	LongBlink();
+	delay(500);	
+	
+	LongBlink();
+	ShortBlink();
+	delay(500);
+	
+	LongBlink();
+	LongBlink();
+	ShortBlink();
+	delay(500);
+	
+    
+}
+
+void LongBlink() {
+    digitalWrite(led, HIGH);
+    delay(1000);
+    digitalWrite(led, LOW);
+    delay(500);
+}
+
+void ShortBlink() {
+    digitalWrite(led, HIGH);
+    delay(100);
+    digitalWrite(led, LOW);
+    delay(500);
+}
